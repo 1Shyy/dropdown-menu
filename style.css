@@ -1,0 +1,227 @@
+body
+{
+  font-family: "Roboto Condensed", sans-serif;
+  color: #07000F;
+  font-size: 16px;
+  box-sizing: border-box;
+}
+
+.span
+{
+    font-size: 14px;
+    color: #07000F;
+    font-weight: 400;
+}
+
+.active_div
+{
+  width: 320px;
+  height: 48px;
+  line-height: 48px;
+  font-family: 'roboto bold';
+  margin-top: 4px;
+  border-radius: 12px;
+  border: 1px solid #07000F66;
+  display: flex;
+  justify-content: space-between;
+  background: url('img/Search.svg') no-repeat center left 16px #02162D0D;
+  color: #07000F;
+  cursor: pointer;
+  box-sizing: border-box;
+  padding: 0 8px 0 40px;
+  position: relative;
+}
+
+.init_div{
+    width: 32px;
+    height: 32px;
+    color: #FFFFFF;
+    background-color: #0067FE;
+    border-radius: 50%;
+    margin-top: 8px;
+    text-align: center;
+    line-height: 32px;
+}
+
+.dropdown{
+    width: 320px;
+    display: block;
+    border-radius: 12px;
+    border: 1px solid #07000F1A;
+    margin-top: 8px;
+    background: #FFFFFF;
+}
+.selected {
+    height: 56px;
+    border-bottom: 1px solid #dee2e6;
+    padding-left: 12px;
+    display: flex;
+    overflow-x: auto;
+    overflow-y: hidden;
+    scrollbar-width: thin;
+    scrollbar-color: #07000F1A rgb(255, 255, 255);
+}
+
+.selected::-webkit-scrollbar {
+    height: 10px;
+}
+.selected::-webkit-scrollbar-thumb {
+    z-index: 10;
+    background-color: #07000F1A;    /* цвет плашки */
+    border-radius: 20px;       /* закругления плашки */
+    background-clip: content-box;
+    border: 4px solid rgb(255, 255, 255);  /* padding вокруг плашки */
+}
+
+
+.select_block {
+    margin-left: 4px;
+    height: 32px;
+    font-size: 14px;
+    border-radius: 8px;
+    background: #02162D0D;
+    border: 1px solid #07000F1A;
+    margin-top: 10px;
+    text-align: center;
+    line-height: 32px;
+    text-transform: uppercase;
+    display: flex;
+    justify-content: space-between;
+    font-family: 'roboto bold';
+}
+.selected_text {
+    margin-left: 12px;
+}
+.selected_btn {
+    margin-left: 4px;
+    margin-right: 8px;
+    min-width: 16px;
+    height: 30px;
+    background: url(img/Vector.svg) center no-repeat;
+}
+.container {
+    width: 100%;
+    border: 1px solid #dee2e6;
+    border-radius: 0.375rem;
+  }
+
+  .tab {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .tab-content{
+    display: none;
+  }
+
+  .tab-nav {
+    height: 40px;
+    display: flex;
+    flex-wrap: wrap;
+    border-bottom: 1px solid #dee2e6;
+    order: -1;
+    font-family: 'roboto bold';
+  }
+
+  .tab-link {
+    margin-left: 16px;
+    height: 40px;
+    line-height: 40px;
+    box-sizing: border-box;
+    display: block;
+    text-decoration: none;
+    border: 1px solid transparent;
+    color: #07000F66;
+    transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out;
+  }
+
+  .active-tab {
+    width: fit-content;
+    color: #07000F;
+    cursor: default;
+    border-bottom: 1px solid #07000F;
+  }
+
+.tab-content ul{
+    
+    max-height: 292px;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    padding: 0;
+    margin: 8px 0 0 0;
+    scrollbar-width: thin;
+    scrollbar-color: #07000F rgb(255, 255, 255);
+    scroll-padding: 50px;
+}
+
+.tab-content ul::-webkit-scrollbar {
+    width: 14px;
+}
+.tab-content ul::-webkit-scrollbar-thumb {
+    background-color: #07000F;    /* цвет плашки */
+    border-radius: 20px;       /* закругления плашки */
+    background-clip: content-box;
+    border: 5px solid rgb(255, 255, 255);  /* padding вокруг плашки */
+}
+
+.tab-content li{
+    padding-left: 16px;
+    margin: 0 auto;
+    width: 293px;
+    height: 48px;
+    line-height: 48px;
+    display: flex;
+    justify-content: space-between;
+}
+.tab-content input{
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    border: 1px solid #07000F1A;
+    appearance: none;
+    -moz-appearance: none;
+    margin-top: 8px;
+}
+
+.tab-content input:checked{
+    background: url('img/Tick.svg') no-repeat center #0067FE;
+}
+
+.hidden{
+    display: none
+}
+
+.active{
+    display: block;
+}
+
+.before{
+    display: none;
+    content: "";
+    position: absolute;
+    width: 320px;
+    height: 80px;
+    background: linear-gradient(white, transparent);
+    pointer-events: none;
+  }
+
+.after{
+    display: block;
+    content: "";
+    position: absolute;
+    width: 320px;
+    height: 80px;
+    margin-top: -80px;
+    background: linear-gradient(transparent, white);
+    pointer-events: none;
+  }
+
+@font-face {
+    font-family: 'roboto';
+    src: url(fonts/RobotoCondensed-Regular.ttf);
+}
+
+@font-face {
+    font-family: 'roboto bold';
+    src: url(fonts/RobotoCondensed-Bold.ttf);
+}
